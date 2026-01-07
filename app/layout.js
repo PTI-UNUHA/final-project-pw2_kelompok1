@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "EduCorse.id",
-  description: "Belajar Dengan Kenyamanan Digital",
+  description: "Platform Kursus Online",
 };
 
 export default function RootLayout({ children }) {

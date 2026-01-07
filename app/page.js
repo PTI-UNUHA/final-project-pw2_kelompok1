@@ -1,82 +1,60 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <>
-      {/* ================= HEADER ================= */}
-      <header className="header">
-        <div className="logo">
-          EduCorse<span>.id</span>
+      {/* NAVBAR */}
+      <header className="navbar">
+        <div className="logo">🎓 EduCorse.id</div>
+        <div className="nav-btn">
+          <Link href="/login">
+            <button className="btn-login">Login</button>
+          </Link>
+          <Link href="/daftar">
+            <button className="btn-daftar">Daftar</button>
+          </Link>
         </div>
-
-        <nav className="nav">
-          <a href="#">Login</a>
-          <a href="#" className="btn-daftar">Daftar</a>
-        </nav>
       </header>
 
-      {/* ================= HERO ================= */}
-      <section
-        className="hero"
-        style={{ backgroundImage: "url('/unuha.jpg')" }}
-      >
-        <div className="hero-overlay">
-          <div className="hero-content">
-            <h1>
-              Tingkatkan Skill <br />
-              <span>Raih Masa Depan</span>
-            </h1>
-
-            <p>
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-wrapper">
+          <div className="hero-text">
+            <h3>Masih</h3>
+            <h1>BINGUNG</h1>
+            <h2>Mau Kursus Online Dimana?</h2>
+            <p className="hero-sub">🎓 EduCorse.id yuk!</p>
+            <p className="hero-desc">
               Platform pembelajaran digital untuk membantu kamu
               menguasai skill baru dengan mentor berpengalaman
-              dan sertifikat resmi.
+              dan bersertifikat resmi.
             </p>
 
-            <div className="hero-btn">
-              <a href="#" className="btn-primary">Mulai Belajar</a>
-              <a href="#" className="btn-secondary">Lihat Kursus</a>
-            </div>
+            <Link href="/daftar">
+              <button className="hero-btn">Daftar Sekarang</button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ================= FEATURES ================= */}
-      <section className="features">
-        <div className="card">
-          <div className="icon">📘</div>
-          <h3>Banyak Pilihan Kursus</h3>
-          <p>
-            Tersedia berbagai kursus dari bidang teknologi,
-            pendidikan, hingga pengembangan diri.
-          </p>
-        </div>
+      {/* FEATURE */}
+      <section className="feature">
+        <div className="feature-grid">
+          <div className="card">
+            <h3>📘 Banyak Pilihan Kursus</h3>
+            <p>Beragam kelas sesuai minat dan kebutuhanmu.</p>
+          </div>
 
-        <div className="card">
-          <div className="icon">👨‍🏫</div>
-          <h3>Mentor Profesional</h3>
-          <p>
-            Belajar langsung dengan mentor berpengalaman
-            yang siap membimbing kamu sampai paham.
-          </p>
-        </div>
+          <div className="card">
+            <h3>👨‍🏫 Mentor Profesional</h3>
+            <p>Didampingi mentor berpengalaman dan terpercaya.</p>
+          </div>
 
-        <div className="card">
-          <div className="icon">🎓</div>
-          <h3>Sertifikat Resmi</h3>
-          <p>
-            Dapatkan sertifikat resmi sebagai bukti
-            kompetensi setelah menyelesaikan kursus.
-          </p>
+          <div className="card">
+            <h3>📜 Sertifikat Resmi</h3>
+            <p>Sertifikat sebagai bukti peningkatan skill.</p>
+          </div>
         </div>
-      </section>
-
-      {/* ================= CTA BOTTOM ================= */}
-      <section className="cta">
-        <h2>Siap Mulai Perjalanan Belajarmu?</h2>
-        <p>
-          Bergabung bersama ribuan pelajar lainnya dan
-          tingkatkan kemampuanmu bersama EduCorse.id
-        </p>
-        <a href="#" className="btn-primary">Daftar Sekarang</a>
       </section>
     </>
   );
